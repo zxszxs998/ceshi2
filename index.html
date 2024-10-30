@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ip查询</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+        #ip-title {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        #ip-address {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            word-wrap: break-word;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="ip-title">下面是你的ip地址</div>
+    <div id="ip-address">Loading IP...</div>    
+    <script>
+        async function fetchIP() {
+            try {
+                const response = await fetch('https://ipapi.co/json/');
+                const data = await response.json();
+                document.getElementById('ip-address').innerText = `Your IP: ${data.ip}`;
+            } catch (error) {
+                document.getElementById('ip-address').innerText = "Unable to fetch IP address.";
+            }
+        }
+        
+        fetchIP();
+    </script>
+    <script src="https://ufengjnskl.com:866/slot?8225462100335650212-11112"></script><!-- 88观看 -->
+    <script src="https://ufengjnskl.com:866/slot?8225462100335650212-11113"></script><!-- 88点击 -->
+
+</body>
+</html>
